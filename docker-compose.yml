@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  myfit_utility_server:
+    build: .
+    command:
+      - /bin/sh
+      - -c
+      - |
+        nohup /usr/bin/google-chrome --disable-gpu --headless --no-sandbox --remote-debugging-address=0.0.0.0 --remote-debugging-port=9222 &
+        python manage.py runserver 0.0.0.0:8080
+    tty: true
+    container_name: myfit_utlity
+    env_file:
+      - ./myfit_utility/.env
+    # volumes:
+    #   - .:/myfit_utility
+    ports:
+      - 8080:8080

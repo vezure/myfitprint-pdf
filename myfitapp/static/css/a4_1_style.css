@@ -1,0 +1,356 @@
+
+body{
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+	left:0px;
+	top:0px;
+	margin:0 auto;
+	position: relative;
+	transform: scale(1.8);
+	transform-origin: 0 0;
+	overflow-x: hidden;
+
+
+}
+
+
+.screen1{
+   width: 595px;
+   height: 842px;
+   background: #c9eff3;
+   display: flex;
+   flex-direction: column;
+}
+
+.imgbackground{
+position: relative;
+}
+
+.myfitprint_report{ 
+    position: absolute;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 150%;
+    color: #EDF2F5;
+    margin-left: 72px;
+    margin-top: 20px;
+}
+
+.powered_by_metflux{
+    position: absolute;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 150%;
+    color: #EDF2F5;
+    margin-left: 72px;
+    margin-top: 45px;
+}
+
+.karan_lomore_text{
+    position: absolute;
+    font-weight: 900;
+    font-size: 22.5px;
+    line-height: 26px;
+    color: #EDF2F5;
+    margin-left: 72px;
+    margin-top: 95px;
+}
+
+.vertical_hr{
+    width: 27px;
+    height: 0px;
+    border: 1px solid rgba(230, 230, 230, 0.4);
+    transform: rotate(90deg);
+}
+
+.gender_age{
+    position: absolute;
+    width: 150px;
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: #EDF2F5;
+    display: flex;
+    margin-left: 72px;
+    margin-top: 150px;
+}
+
+.overview{
+    position: absolute;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    margin-left: 72px;
+    margin-top: 280px;
+}
+
+.divs1{
+    display: flex;
+    width: 900px;
+    position: absolute;
+    margin-top: 300px;
+}
+.divs2{
+    display: flex;
+    width: 900px;
+    margin-top: 20px;
+}
+
+.body_type_div{
+    width: 212px;
+    height: 64px;
+    margin-left: 72px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+}
+
+.body_type_div2{
+    width: 212px;
+    height: 64px;
+    margin-left: 14px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+}
+
+.body_type_text{
+    margin-left: 22px;
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 23px;
+    color: #000000;
+}
+
+.obese{
+    margin-left: 2px;
+    margin-top: 18px;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 23px;
+}
+
+#year_28_red{
+    color: #FFB36D;
+    font-size: 25px;
+    margin-left: 2px;
+    margin-top: 20px;
+    margin-right: 4px;
+}
+.years{
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 15px;
+    margin-right: 20px;
+    margin-top: 25px;
+}
+
+.section-head{
+    margin-top: 10px;
+    margin-left: 22px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 29px;
+    color: #000000;
+}
+
+.score_div{
+    font-size: 20px;
+    font-weight: 600;
+    color: #4BC77D;
+    margin-left: -28px;
+    margin-top: 10px;
+}
+.out_of_div{
+    color: #000000;
+    font-size: 8px;
+    font-weight: 600;
+    margin-left: -2px;
+}
+
+.left_side{
+    display: flex;
+    flex-direction: column;
+}
+
+.right_side{
+    display: flex;
+	margin-right:12px;
+	margin-bottom:5px;
+    flex-direction: column;
+}
+
+.checkmark{
+    margin-left: 10px;
+    color: #000000;
+}
+
+.healthy{
+    font-size: 11px;
+    color: #4BC77D;
+    margin-top: 5px;
+}
+
+.range{
+    width: 50px;
+    height: 14px;
+    background-color: #4BC77D;
+    border-radius: 12px;
+    border: none;
+    font-size: 10px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.button5{
+    width: 42px;
+    height: 14px;
+    background-color: #4BC77D;
+    border-radius: 12px;
+    border: none;
+    color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 2px;
+    margin-left: -29px;
+}
+
+.button_m{
+    width: 72px;
+    height: 10x;
+    background-color: #FFB36D;
+    border-radius: 12px;
+    margin-left: -38px;
+    margin-top: 5px;
+    color: #FFFFFF;
+    font-size: 10px;
+    text-align: center;
+}
+
+.diet_analysis{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    margin-left: 72px;
+    margin-top: 20px;
+}
+
+.div_bottom{
+    display: flex;
+    flex-direction: column;
+    width: 146px;
+    height: 46px;
+    margin-top: 160px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    margin-left: 60px;
+}
+
+.parent_div{
+    display: flex;
+    width: 900px;
+}
+
+.divs3{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.divs4{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.body_type_div3{
+    width: 146px;
+    height: 37px;
+    margin-left: px;
+    margin-top: 20px;
+    background: #FFFFFF;
+    border-radius: 12px;
+    display: flex;
+}
+
+.section-head1{
+    margin-top: 6px;
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 9px;
+    line-height: 12px;
+    color: #000000;
+}
+
+.healthy1{
+    font-size: 7px;
+    color: #4BC77D;
+    margin-top: -1px;
+    margin-left: -4px;
+}
+
+.range1{
+    width: 50px;
+    height: 9px;
+    background-color: #4BC77D;
+    border-radius: 12px;
+    border: none;
+    margin-top: 2px;
+    font-size: 7px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.vertical_hr1{
+    width: 18px;
+    height: 0px;
+    border: 1px solid rgba(230, 230, 230, 0.4);
+    transform: rotate(90deg);
+    margin-left: -4px;
+    margin-top: 15px;
+}
+
+.score_div1{
+    font-size: 10px;
+    font-weight: 600;
+    color: #4BC77D;
+    margin-top: 8px;
+}
+.out_of_div1{
+    color: #000000;
+    font-size: 5.5px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.button_m1{
+    width: 50px;
+    height: 15px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 2px;
+    color: #FFFFFF;
+    font-size: 5px;
+}
+
+
+.score_div2{
+    font-size: 10px;
+    font-weight: 600;
+    color: #4BC77D;
+    margin-left: -38px;
+    margin-top: 12px;
+}
+.out_of_div2{
+    font-size: 6px;
+    font-weight: 600;
+    margin-left: 2px;
+}
+

@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/a4_5_style.css' %}" type="text/css">
+    <title>A4-5</title>
+</head>
+<body>
+    <div class="A4-5_screen">
+            <div class="div1">
+                <div class="myfitprint">MyFitPrint Report <span class="poweredbymetflux">Powered by MetFlux</span></div>
+                <div class="karan_gender_age">{{general.general.0.value}} | {{general.general.1.value| capfirst}} | {{general.general.2.value | floatformat}}</div>
+            </div>
+            <div class="apendix">Apendix</div>
+
+            <div class="div_text">
+                <div class="div_text1"> Report generated on</div>
+                <div class="div_text2">{{definations.general.0.value}}</div>
+                <span class="v10">{{definations.general.1.value}}</span>
+           </div>
+
+           <div class="definitions">Definitions</div>
+           <div class="title">Body type</div>
+           <div class="text1">{{definations.general.7.text}}</div>
+
+           <div class="title">BMI</div>
+           <div class="text1">{{definations.general.4.text}}</div>
+
+          
+           <div class="title">Body fat %</div>
+           <div class="text1">{{definations.general.6.text}}</div>
+
+           <div class="title">Lean mass %</div>
+           <div class="text1">{{definations.general.17.text}}</div>
+
+           <div class="title">BMR</div>
+           <div class="text1">{{definations.general.5.text}}</div>
+
+           <div class="title">Bio Age</div>
+           <div class="text1">{{definations.general.3.text}}</div>
+
+           <div class="title">Disclaimer</div>
+           <div class="text1">MyFitPrint shall not be responsible for any deficiency/inaccuracy in this report arising out of or in relation to any errors or deficiencies in the data provided for the same. This is a system generated report based on algorithms and shall not be treated as the opinion of an expert in any domain and /or any medical or professional advice. This report is only meant to be a general indicator of health status of the end-user and the end-user should not disregard or delay to seek professional advice including medical advice on the basis of anything contained herein.</div>
+
+
+           <div class="bottom_day_time">{{definations.general.0.value}}, {{definations.general.1.value}}<span class="two">2</span></div>
+
+
+
+
+    </div>
+</body>
+</html>

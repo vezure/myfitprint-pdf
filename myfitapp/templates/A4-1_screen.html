@@ -1,0 +1,396 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/a4_1_style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/a4_1_percen.css' %}" type="text/css">
+
+    <title>A4-1 Screen</title>
+</head>
+<body>
+<div id="wrap">
+    <div class="screen1">
+
+        <img class="imgbackground" src="{% static 'img/Group_130.png' %}">
+        <div class="myfitprint_report">MyFitPrint Report</div>
+        <div class="powered_by_metflux">Powered by MetFlux</div>
+        <div class="karan_lomore_text">{{general.general.0.value}}</div>
+        <div class="gender_age">{{general.general.1.value| capfirst}} <hr class="vertical_hr"> {{general.general.2.value|floatformat}} {{general.general.2.unit}}</div>
+   
+         <div class="overview">Overview</div>
+
+<!-- percentage graph one -->		 
+<div style="margin-left:280px; z-index:100; top:0px; position:absolute; height:500px; width:800px;">
+
+
+<div class="flex-wrapper" style="transform: scale(0.9);">
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart orange">
+      <path class="circle-bg"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" 
+      /> 
+      <path class="circle"
+        stroke-dasharray="{{general.ranges.1.value| floatformat}}, 100"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" 
+		  
+      />
+      <text x="19" y="20.35" class="percentage"></text>
+	  
+	  
+	     <div style="margin-left:72px; z-index:100; top:78px; position:absolute;">
+
+            <div class="right_side">
+			 <span style="font-size:15px; color:#333;">Your Fitness Score</span></br>
+			 <div style="margin-left:14px;">
+                <div  style="margin-right:0px; color:{{general.ranges.1.color}}; font-size:30px;">{{general.ranges.1.value| floatformat}}<span style="font-size:20px;color:#ccc;">/100</span>
+
+                </div>
+                <div style="width:95px; height:30px;border-radius:10px; background:{{general.ranges.1.color}};color:#FFFFFF;text-align:Center; font-size:12px; ">
+                  {{general.ranges.1.category}}
+                </div></div>
+				
+            </div>
+       </div>
+	  
+	  
+    </svg>
+  </div>
+  
+</div>
+
+</div>
+
+<!-- End of percentage graph one -->
+<div class="divs1">
+         <div class="body_type_div">
+            <div class="body_type_text">Body type</div><hr class="vertical_hr" style="margin-top: 30px;">
+            <div class="obese" style="color: {{general.item.0.color}};">{{general.item.0.value}}</div>
+        </div>
+
+        
+        <div class="body_type_div2">
+            <div class="left_side">
+                <div class="body_type_text"><strong>Body Fat %</strong></div>
+                <div class="healthy"><span class="checkmark">&#10003;</span> Healthy:
+                    <button class="range">{{general.ranges.3.range.0}}-{{general.ranges.3.range.1}}</button>
+                </div>
+            </div>  
+            <hr class="vertical_hr1" style="margin-top: 30px;">
+            <div class="right_side">
+                <div class="score_div"  style="color: {{general.ranges.3.color}};">{{general.ranges.3.value}}
+                    <span class="out_of_div">kg/m<sup>2</sup></span>
+                </div>
+                <button class="button_m1" style="background: {{general.ranges.3.color}};">
+                   {{general.ranges.3.category}}
+                </button>
+            </div>
+        </div>
+</div>
+
+    <div class="divs2">
+        <div class="body_type_div">
+            <div class="left_side">
+                <div class="body_type_text"><strong>BMI</strong></div>
+                <div class="healthy" > <span class="checkmark">&#10003;</span> Healthy:
+                    <button class="range">{{general.ranges.2.range.0}}-{{general.ranges.2.range.1}}</button>
+                </div>
+            </div>  
+            <hr class="vertical_hr1" style="margin-top: 30px;">
+            <div class="right_side">
+                <div class="score_div" style="color: {{general.ranges.2.color}};">{{general.ranges.2.value}}
+                    <span class="out_of_div">kg/m<sup>2</sup></span>
+                </div>
+                <button  class="button_m1" style="background: {{general.ranges.2.color}};">
+                  {{general.ranges.2.category}}
+                </button>
+            </div>
+       </div>
+
+       <div class="body_type_div" style="margin-left: 14px;">
+           <div class="body_type_text">Bio age</div><hr class="vertical_hr" style="margin-top: 30px;">
+           <div class="obese" id="year_28_red" style="color: {{general.item.1.color}};">{{general.item.1.value|floatformat}}</div><div class="years">{{general.item.1.unit}}</div>
+        
+       </div>
+   </div>
+
+   <div class="diet_analysis">Diet Analysis</div>
+
+   
+   
+   <!-- percentage graph two deit analysis -->		 
+<div style="margin-left:-80px; z-index:100; top:465px; position:absolute; height:100px; width:800px;">
+
+
+<div class="flex-wrapper" style="transform: scale(0.7);">
+  <div class="single-chart">
+    <svg viewBox="0 0 36 36" class="circular-chart green">
+      <path class="circle-bg"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831" 
+      /> 
+      <path class="circle"
+        stroke-dasharray="{{diet_analysis.ranges.0.value| floatformat}} 100"
+        d="M18 2.0845
+          a 15.9155 15.9155 0 0 1 0 31.831
+          a 15.9155 15.9155 0 0 1 0 -31.831"
+		  
+      />
+      <text x="20" y="20.35" class="percentage"></text>
+	  
+	  
+	     <div style="margin-left:72px; z-index:100; top:78px; position:absolute;">
+
+            <div class="right_side">
+			 <span style="font-size:15px; color:#333;">&nbsp;&nbsp;&nbsp;Nutrition Score</span></br>
+			 <div style="margin-left:14px;">
+                <div  style="margin-right:0px; color:{{diet_analysis.ranges.0.color}};  font-size:30px;">{{diet_analysis.ranges.0.value| floatformat}}<span style="font-size:20px; color:#ccc;">/100</span>
+
+                </div>
+                <div style="width:95px; height:15px;border-radius:10px; background:#4CC790;color:fff;text-align:Center; font-size:12px; ">
+                  {{diet_analysis.ranges.0.category}}
+                </div></div>
+				
+            </div>
+       </div>
+	  
+	  
+    </svg>
+  </div>
+  
+</div>
+
+</div>
+
+<!-- End of percentage graph two -->
+   
+   
+
+<div class="parent_div">
+
+    <div class="div_bottom">
+        <div class="body_type_div3">
+            <div class="left_side">
+               <div class="section-head1" style="margin-top: -10px;font-size: 10.5px;">{{diet_analysis.ranges.1.name}}</div>
+               <div class="healthy1" style="margin-top: 8px;"> <span class="checkmark">&#10003;</span> Healthy:
+                   <button class="range1">{{diet_analysis.ranges.1.range.0}}-{{diet_analysis.ranges.1.range.1}}</button>
+                </div>
+            </div>
+            <hr class="vertical_hr1" style="margin-top: 1px;width: 18px;">
+
+            <div class="right_side" >
+                <div class="score_div1" style="color: {{diet_analysis.ranges.1.color}};margin-top: -10px;font-size: 11px;">{{diet_analysis.ranges.1.value}}
+                    <span class="out_of_div1">&nbsp;&nbsp;kCal</span>
+                </div>
+                <button class="button_m1" style="margin-top: 5px;width: 48px;font-size: 6px;background-color: {{diet_analysis.ranges.1.color}};">
+                   {{diet_analysis.ranges.1.category}}
+                </button>
+            </div>
+        </div>
+    </div>
+
+    
+        <div class="divs3">
+                        <!-- Carbs-->
+                        <div class="body_type_div3">
+                            <div class="left_side">
+                               <div class="section-head1">{{diet_analysis.ranges.2.name}}</div>
+                               <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                                   <button class="range1">{{diet_analysis.ranges.2.range.0}}-{{diet_analysis.ranges.2.range.1}}</button>
+                                </div>
+                            </div>
+                            <hr class="vertical_hr1">
+
+                            <div class="right_side">
+                                <div class="score_div1" style="color:{{diet_analysis.ranges.2.color}}">{{diet_analysis.ranges.2.value}}
+                                    <span class="out_of_div1">{{diet_analysis.ranges.2.unit}}</span>
+                                </div>
+                                <button class="button_m1" style="background-color: {{diet_analysis.ranges.2.color}};">
+                                  {{diet_analysis.ranges.2.category}}
+                                </button>
+                            </div>
+        
+                        </div>
+                        <!-- Fat-->
+                        <div class="body_type_div3">
+                            <div class="left_side">
+                                <div class="section-head1">{{diet_analysis.ranges.4.name}}</div>
+                                <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                                    <button class="range1">{{diet_analysis.ranges.4.range.0}}-{{diet_analysis.ranges.4.range.1}}</button>
+                                 </div>
+                             </div>
+                             <hr class="vertical_hr1">
+ 
+                             <div class="right_side">
+                                 <div class="score_div1" style="color: {{diet_analysis.ranges.4.color}};">{{diet_analysis.ranges.4.value}}
+                                     <span class="out_of_div1">{{diet_analysis.ranges.4.unit}}</span>
+                                 </div>
+                                 <button class="button_m1" style="background-color: {{diet_analysis.ranges.4.color}};">
+                                     {{diet_analysis.ranges.4.category}}
+                                 </button>
+                             </div>
+                        
+                        </div>
+                        <!-- Calcium-->
+                        <div class="body_type_div3">
+                            <div class="left_side">
+                                <div class="section-head1">{{diet_analysis.ranges.6.name}}</div>
+                                <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                                    <button class="range1">{{diet_analysis.ranges.6.range.0}}-{{diet_analysis.ranges.6.range.1}}</button>
+                                 </div>
+                             </div>
+                             <hr class="vertical_hr1">
+ 
+                             <div class="right_side">
+                                 <div class="score_div2" style="color: {{diet_analysis.ranges.6.color}};">{{diet_analysis.ranges.6.value}}
+                                     <span class="out_of_div2">{{diet_analysis.ranges.6.unit}}</span>
+                                 </div>
+                             </div>
+
+                        </div>
+                        <!-- Vitamin C-->
+                        <div class="body_type_div3">
+                         <div class="left_side">
+                               <div class="section-head1">{{diet_analysis.ranges.8.name}}</div>
+                               <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                                   <button class="range1">{{diet_analysis.ranges.8.range.0}}-{{diet_analysis.ranges.8.range.1}}</button>
+                                </div>
+                            </div>
+                            <hr class="vertical_hr1">
+
+                            <div class="right_side">
+                                <div class="score_div2" style="color: {{diet_analysis.ranges.8.color}};">{{diet_analysis.ranges.8.value}}
+                                    <span class="out_of_div2">{{diet_analysis.ranges.8.unit}}</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Vitamin C-->
+                        <div class="body_type_div3">
+                         <div class="left_side">
+                               <div class="section-head1">{{diet_analysis.ranges.10.name}}</div>
+                               <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                                   <button class="range1">{{diet_analysis.ranges.10.range.0}}-{{diet_analysis.ranges.10.range.1}}</button>
+                                </div>
+                            </div>
+                            <hr class="vertical_hr1">
+
+                            <div class="right_side">
+                                <div class="score_div2" style="color: {{diet_analysis.ranges.10.color}};">{{diet_analysis.ranges.10.value}}
+                                    <span class="out_of_div2">{{diet_analysis.ranges.10.unit}}</span>
+                                </div>
+                            </div>
+
+                        </div>
+
+        </div>
+
+        <div class="divs4">
+            <!-- Protein-->
+            <div class="body_type_div3">
+                <div class="left_side">
+                    <div class="section-head1">{{diet_analysis.ranges.3.name}}</div>
+                    <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                        <button class="range1">{{diet_analysis.ranges.3.range.0}}-{{diet_analysis.ranges.3.range.1}}</button>
+                     </div>
+                 </div>
+                 <hr class="vertical_hr1">
+
+                 <div class="right_side">
+                     <div class="score_div1" style="color: {{diet_analysis.ranges.3.color}};">{{diet_analysis.ranges.3.value}}
+                         <span class="out_of_div1">{{diet_analysis.ranges.5.unit}}</span>
+                     </div>
+                     <button class="button_m1" style="background-color: {{diet_analysis.ranges.3.color}};">
+                         {{diet_analysis.ranges.3.category}}
+                     </button>
+                 </div>
+            </div>
+            <!-- Fibre-->
+            <div class="body_type_div3">
+                <div class="left_side">
+                    <div class="section-head1">{{diet_analysis.ranges.5.name}}</div>
+                    <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                        <button class="range1">{{diet_analysis.ranges.5.range.0}}-{{diet_analysis.ranges.5.range.1}}</button>
+                     </div>
+                 </div>
+                 <hr class="vertical_hr1">
+
+                 <div class="right_side">
+                     <div class="score_div1" style="color: {{diet_analysis.ranges.5.color}};">24.7
+                         <span class="out_of_div1">{{diet_analysis.ranges.5.unit}}</span>
+                     </div>
+                     <button class="button_m1" style="background: {{diet_analysis.ranges.5.color}};">
+                        {{diet_analysis.ranges.5.category}}
+                     </button>
+                 </div>
+            </div>
+            <!-- Iron-->
+            <div class="body_type_div3">
+                <div class="left_side">
+                    <div class="section-head1">{{diet_analysis.ranges.7.name}}</div>
+                    <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                        <button class="range1">{{diet_analysis.ranges.7.range.0}}-{{diet_analysis.ranges.7.range.1}}</button>
+                     </div>
+                 </div>
+                 <hr class="vertical_hr1">
+
+                 <div class="right_side">
+                     <div class="score_div2" style="color: {{diet_analysis.ranges.7.color}};">{{diet_analysis.ranges.7.value}}
+                         <span class="out_of_div2">{{diet_analysis.ranges.7.unit}}</span>
+                     </div>
+                 </div>
+            </div>
+            <!-- Vitamin A-->
+
+            <div class="body_type_div3">
+                <div class="left_side">
+                    <div class="section-head1">{{diet_analysis.ranges.9.name}}</div>
+                    <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                        <button class="range1">{{diet_analysis.ranges.9.range.0}}-{{diet_analysis.ranges.9.range.1}}</button>
+                     </div>
+                 </div>
+                 <hr class="vertical_hr1">
+
+                 <div class="right_side">
+                     <div class="score_div2" style="color: {{diet_analysis.ranges.9.color}};">{{diet_analysis.ranges.9.value}}
+                         <span class="out_of_div2">{{diet_analysis.ranges.9.unit}}</span>
+                     </div>
+                 </div>
+            </div>
+         <!-- Vitamin D-->
+            <div class="body_type_div3">
+                <div class="left_side">
+                    <div class="section-head1">{{diet_analysis.ranges.11.name}}</div>
+                    <div class="healthy1" > <span class="checkmark">&#10003;</span> Healthy:</br>
+                        <button class="range1">{{diet_analysis.ranges.11.range.0}}-{{diet_analysis.ranges.11.range.1}}</button>
+                     </div>
+                 </div>
+                 <hr class="vertical_hr1">
+
+                 <div class="right_side">
+                     <div class="score_div2" style="color: {{diet_analysis.ranges.11.color}};">{{diet_analysis.ranges.11.value}}
+                         <span class="out_of_div2">{{diet_analysis.ranges.11.unit}}</span>
+                     </div>
+                 </div>
+            </div>
+
+        </div>
+        </div>
+
+         <div class="bottom_text" style="font-size: 7px;"> MyFitPrint attempts to calculate accurate daily calorie intake based on the answers you provide. However, these figures should be considered as estimates.</div>
+
+    </div>
+	</div>
+
+</body></br>
+</html>
+
+
+

@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/a4_4_style.css' %}" type="text/css">
+    <title>A4-4</title>
+</head>
+<body>
+<div class="A4-4_screen">
+            <div class="div1">
+                <div class="myfitprint">MyFitPrint Report <span class="poweredbymetflux">Powered by MetFlux</span></div>
+                <div class="karan_gender_age">{{general.general.0.value}} | {{general.general.1.value| capfirst}} | {{general.general.2.value | floatformat}}</div>
+            </div>
+
+            <div class="diet_flex5">
+
+                <div class="diet_flex_div">
+                    <div class="micro_div_text">Calcium</div>
+                    <div class="micro_div_unit_text">{{diet_advice.ranges.0.range.0}}-{{diet_advice.ranges.0.range.1}}
+                        <span class="micro_div_unit">{{diet_advice.ranges.0.unit}}</span>
+                    </div> 
+                </div>
+
+                <div class="diet_flex_div">
+                    <div class="micro_div_text">Iron</div>
+                    <div class="micro_div_unit_text">{{diet_advice.ranges.1.range.0}}-{{diet_advice.ranges.1.range.1}}
+                        <span class="micro_div_unit">{{diet_advice.ranges.0.unit}}</span>
+                    </div> 
+                </div>
+
+                <div class="diet_flex_div">
+                    <div class="micro_div_text">Zinc</div>
+                    <div class="micro_div_unit_text">{{diet_advice.ranges.2.range.0}}-{{diet_advice.ranges.2.range.1}}
+                        <span class="micro_div_unit">{{diet_advice.ranges.0.unit}}</span>
+                    </div> 
+                </div>
+
+                <div class="diet_flex_div"> <div class="micro_div_text">Vitamin A</div>
+                    <div class="micro_div_unit_text">{{diet_advice.ranges.3.range.0}}-{{diet_advice.ranges.3.range.1}}
+                        <span class="micro_div_unit">{{diet_advice.ranges.0.unit}}</span>
+                    </div> 
+               </div>
+
+                <div class="diet_flex_div">
+                    <div class="micro_div_text">Vitamin C</div>
+                    <div class="micro_div_unit_text">{{diet_advice.ranges.4.range.0}}-{{diet_advice.ranges.4.range.1}}
+                        <span class="micro_div_unit">{{diet_advice.ranges.0.unit}}</span>
+                    </div> 
+                </div>
+
+                <div class="diet_flex_div">
+                    <div class="micro_div_text">Vitamin D</div>
+                    <div class="micro_div_unit_text">{{diet_advice.ranges.5.range.0}}-{{diet_advice.ranges.5.range.1}}
+                        <span class="micro_div_unit">{{diet_advice.ranges.0.unit}}</span>
+                    </div> 
+                </div>
+
+            </div>
+
+            <div class="for_detailed_text">For detailed diet plan, seek professional help. </div>
+                 <div class="title_text">Activity Advice</div>
+                 <div class="for_detailed_text" style="font-size:11px;">Include workout into your day and choose activities that you enjoy</div>
+                 
+                 <div class="single_div">
+                    <div class="flex_text">
+                        <div class="text">Daily goal calories burn</div>
+                        <div class="cal_text">{{activity_advice.item.0.value}}<span class="cal">{{activity_advice.item.0.unit}}</span></div>
+                    </div>
+                </div>
+
+                <div class="flex5_divs">
+                    <div class="activity_div">
+                        <div class="top_text">👟 Low intensity<span class="workout">Workout</span></div>
+                        <div class="middle_div">⏲️{{activity_advice.general.0.value}} {{activity_advice.general.0.unit}}</div>
+                        <div class="bottom_text">{{activity_advice.general.0.text}}</div>
+                    </div>
+                    <div class="activity_div">
+                        <div class="top_text">🏸 Medium intensity<span class="workout">Workout</span></div>
+                        <div class="middle_div">⏲️ {{activity_advice.general.1.value}} {{activity_advice.general.1.unit}}</div>
+                        <div class="bottom_text">{{activity_advice.general.1.text}}</div>
+                    </div>
+                </div>
+
+                <div class="for_detailed_text" style="font-size: 9px;">Include workout into your day and choose activities that you enjoy </div>
+
+                <div class="title_text">Lifestyle Advice</div>
+                <div class="for_detailed_text" style="font-size:11px;">Include workout into your day and choose activities that you enjoy</div>
+                
+                <div class="flex6_divs">
+                    <div class="lifestyle_div">
+                        <div class="top_text1">😴 Sleep</div>
+                        <div class="middle_div1">{{lifestyle_advice.general.2.value}} / {{lifestyle_advice.general.2.unit}}</div>
+                        <div class="bottom_text1">{{lifestyle_advice.general.2.text}}</div>
+                    </div>
+                    <div class="lifestyle_div">
+                        <div class="top_text1"> 💧 Water</div>
+                        <div class="middle_div1">{{lifestyle_advice.general.0.value}} / {{lifestyle_advice.general.0.unit}}</div>
+                        <div class="bottom_text1">{{lifestyle_advice.general.0.text}}</div>
+                    </div>
+                    <div class="lifestyle_div">
+                        <div class="top_text1">☀️ Sunlight</div>
+                        <div class="middle_div1">{{lifestyle_advice.general.1.value}} / {{lifestyle_advice.general.1.unit}}</div>
+                        <div class="bottom_text1">{{lifestyle_advice.general.1.text}}</div>
+                    </div>
+                    <div class="lifestyle_div"><div class="top_text1">🖌 Hobby</div>
+                    <div class="middle_div1">{{lifestyle_advice.general.3.value}} / {{lifestyle_advice.general.3.unit}}</div>
+                    <div class="bottom_text1">{{lifestyle_advice.general.3.text}}</div></div>
+                    <div class="lifestyle_div"><div class="top_text1">👪 Leisure</div>
+                    <div class="middle_div1">{{lifestyle_advice.general.4.value}} / {{lifestyle_advice.general.4.unit}}</div>
+                    <div class="bottom_text1">{{lifestyle_advice.general.4.text}}</div></div>
+                    <div class="lifestyle_div">
+                        <div class="top_text1"> 🏖 Vacation</div>
+                        <div class="middle_div1">{{lifestyle_advice.general.5.value}}</div>
+                        <div class="bottom_text1">{{lifestyle_advice.general.5.text}}</div>
+                    </div>
+                    <div class="lifestyle_div">
+                        <div class="top_text1">🚬 Smoking</div>
+                        <div class="middle_div1">{{lifestyle_advice.general.6.value}} </div>
+                        <div class="bottom_text1">{{lifestyle_advice.general.6.text}}</div>
+                    </div>
+                    <div class="lifestyle_div">
+                        <div class="top_text1">🍷 Alcohol</div>
+                        <div class="middle_div1">{{lifestyle_advice.general.7.value}}</div>
+                        <div class="bottom_text1">{{lifestyle_advice.general.7.text}}</div>
+                    </div>
+                </div>
+
+
+                <div class="bottom_day_time">19-08-2020 11:34:45, v1.0 <span class="two">2</span></div>
+ </div>     
+</body></br>
+</html>

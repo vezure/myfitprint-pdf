@@ -1,0 +1,228 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/a4_3_style.css' %}" type="text/css">
+    <title>A4-3</title>
+</head>
+<body>
+    <div class="A4-2_screen">
+            <div class="div1">
+                <div class="myfitprint">MyFitPrint Report <span class="poweredbymetflux">Powered by MetFlux</span></div>
+                <div class="karan_gender_age">{{general.general.0.value}} | {{general.general.1.value| capfirst}} | {{general.general.2.value | floatformat}} {{general.general.2.unit}}</div>
+            </div>
+            <div class="activity_text">Your Risks</div>
+
+
+            <div class="risk_divs">
+
+                <div class="one_div">
+                    <div class="warning_orange_div">
+                        <div class="warning_sign_orange">
+                            <span class="warning_sign_symbol">!</span>
+                        </div>
+                        <div class="warning_text">Consult a doctor</div>
+                    </div>
+            
+                    <div class="section1_your_risk_screen" id="section3_div_your_risk">
+                        <div class="section-head">Diabetes Risk</div>
+                        <hr class="section_hr">
+                        <div class="score_div">
+                            <div class="score" id="score" style="color: {{risk.ranges.0.color}};">{{risk.ranges.0.value | floatformat}}  <span class="out_of_div">/100</span></div>
+                       
+                        <div class="button5" id="your_risk_screen_button" style="background-color: {{risk.ranges.0.color}};"><label class="label6" id="moderate_risk">{{risk.ranges.0.category}}</label></div>
+                    </div>
+                    </div>
+                </div>
+        
+                <div class="second_div">
+                    <div class="warning_orange_div" style="background-color: #4bc77d;">
+                        <div class="warning_sign_orange" style="border: 1px solid #2DB664;">
+                            <span class="warning_sign_symbol">!</span>
+                        </div>
+                        <div class="warning_text">Consult a doctor</div>
+                    </div>
+            
+                    <div class="section1_your_risk_screen" id="section3_div_your_risk">
+                        <div class="section-head">Cardiac Risk</div>
+                        <hr class="section_hr">
+                        <div class="score_div">
+                            <div class="score" style="color: {{risk.ranges.1.color}};">{{risk.ranges.1.value | floatformat}} <span class="out_of_div">/100</span></div>
+                       
+                        <div class="button5" style="background-color: {{risk.ranges.1.color}};"><label class="label6" id="moderate_risk">{{risk.ranges.1.category}}</label></div>
+                    </div>
+                    </div>
+                </div>
+        
+                <div class="third_div">
+                    <div class="warning_orange_div" style="background-color: #ff7575;">
+                        <div class="warning_sign_orange">
+                            <span class="warning_sign_symbol">!</span>
+                        </div>
+                        <div class="warning_text">Consult a doctor</div>
+                    </div>
+
+                    <div class="section1_your_risk_screen" id="section3_div_your_risk">
+                        <div class="section-head">Renal Risk</div>
+                        <hr class="section_hr">
+                        <div class="score_div" style="">
+                            <div class="score" style="color: {{risk.ranges.2.color}};">{{risk.ranges.2.value | floatformat}} <span class="out_of_div">/100</span></div>
+                       
+                        <div class="button5" style="background-color: {{risk.ranges.1.color}};"><label class="label6">{{risk.ranges.2.category}}</label></div>
+                    </div>
+                    </div>
+            </div>
+            </div>
+
+
+            <div class="risk_text">The disease risks are calculated using lifestyle data if relevant diagnostic data is not provided</div>
+            <div class="activity_text">Your {{goals.general.0.value}} {{goals.general.0.unit}} goal</div>
+
+
+            <div class="flex2_div">
+
+                <div class="div_1">
+                        <div class="weight_gain_text">Weight gain</div>
+                        <div class="plus_div">
+                        <span class="plus_symbol">+</span></div>
+                        <div class="unit_text">{{goals.general.1.value}}<span class="unit">{{goals.general.1.unit}}</span></div>
+                </div>
+                <div class="div_1">
+                    <div class="weight_gain_text">Body fat loss</div>
+                    <div class="plus_div" id="your_12_plus_div" style="background: rgba(255, 83, 83, 0.05);border: 1px solid rgba(255, 83, 83, 0.05);">
+                        <span class="plus_symbol" style="color: #FF5353;font-size: 15px;margin-top: -5.5px;">-</span></div>
+                    <div class="unit_text" style="color: #FF5353;">{{goals.general.2.value}}<span class="unit">{{goals.general.2.unit}}</span></div>
+                </div>
+                <div class="div_1">
+                    <div class="weight_gain_text" style="font-size: 9px;">Body muscle gain</div>
+                    <div class="plus_div"><span class="plus_symbol">+</span></div>
+                    <div class="unit_text">{{goals.general.3.value}}<span class="unit">{{goals.general.3.unit}}</span></div>
+                </div>
+                <div class="div_1">
+                    <div class="weight_gain_text" style="font-size: 8px;">Increase daily calorie intake</div>
+                    <div class="plus_div"><span class="plus_symbol">+</span></div>
+                    <div class="ss" style="display: flex;flex-direction: column;">
+                    <div class="cal" style="font-size: 8px;margin-left: 10px;margin-top: 2px;color: #a49d9d;">{{goals.general.5.value}} {{goals.general.5.unit}}</div>
+                    <div class="unit_text" style="font-size: 12.5px;margin-top: -6px;">{{goals.general.4.value}}<span class="unit">{{goals.general.4.unit}}</span></div></div>
+                </div>
+                <div class="div_1">
+                    <div class="weight_gain_text" style="font-size: 8px;">Decrease daily calorie burn</div>
+
+                    <div class="plus_div"  style="background: rgba(255, 83, 83, 0.05);border: 1px solid rgba(255, 83, 83, 0.05);">
+                        <span class="plus_symbol" style="color: #FF5353;font-size: 15px;margin-top: -5.5px;">-</span></div>
+                        <div class="ss" style="display: flex;flex-direction: column;">
+                            <div class="cal" style="font-size: 8px;margin-left: 10px;margin-top: 2px;color: #a49d9d;">{{goals.general.7.value}} {{goals.general.7.unit}}</div>
+                    <div class="unit_text" style="color: #FF5353;font-size: 12.5px;margin-top: -7px;">{{goals.general.6.value}}<span class="unit">{{goals.general.6.unit}}</span></div></div>
+                </div>
+
+            </div>
+
+
+            <div class="activity_text">Diet Advice</div>
+            <div class="risk_text" style="font-size: 10px;margin-top: 12px;">Use natural foods over dietary supplements</div>
+
+            <div class="single_div">
+                <div class="flex_text">
+                    <div class="text">Daily goal calorie intake</div>
+                    <div class="cal_text">{{diet_advice.item.0.value}}<span class="cal">{{diet_advice.item.0.unit}}</span></div>
+                </div>
+            </div>
+
+            <div class="flex3_divs">
+                   <div class="div2">
+                    <div class="upper_div">
+                        <div class="upper_div2">
+                            <div class="calcium_text">Carbs</div>
+                            <div class="percent">{{diet_advice.item.2.value}} {{diet_advice.item.2.unit}}</div>
+                        </div>
+                        <div class="gm_text">{{diet_advice.item.1.value}} <span class="gm">{{diet_advice.item.1.unit}}</span></div>
+                    </div>
+
+                    <div class="plus_div" style="margin-left: 15px;">
+                        <span class="plus_symbol">+</span> 
+                   </div>
+                       <div class="increase_text">{{diet_advice.general.0.value}}
+                           <span class="carbs_text">Carbs</span>
+                       </div>
+                       <div class="div_content">{{diet_advice.general.0.text}}</div>
+
+                   </div>
+
+                   <div class="div2">
+                    <div class="upper_div">
+                        <div class="upper_div2">
+                            <div class="calcium_text">Protein</div>
+                            <div class="percent">{{diet_advice.item.4.value}} {{diet_advice.item.4.unit}}</div>
+                        </div>
+                        <div class="gm_text">{{diet_advice.item.3.value}} <span class="gm" > {{diet_advice.item.3.unit}}</span></div>
+                    </div>
+
+                    <div class="plus_div" style="margin-left: 15px;">
+                        <span class="plus_symbol">+</span> 
+                   </div>
+                       <div class="increase_text">{{diet_advice.general.1.value}}
+                           <span class="carbs_text">Protein</span>
+                       </div>
+                       <div class="div_content">{{diet_advice.general.1.text}}</div>
+
+                </div>
+
+                <div class="div2">
+                    <div class="upper_div">
+                        <div class="upper_div2">
+                            <div class="calcium_text">Fats</div>
+                            <div class="percent">{{diet_advice.item.6.value}} {{diet_advice.item.6.unit}}</div>
+                        </div>
+                        <div class="gm_text">{{diet_advice.item.5.value}} <span class="gm">{{diet_advice.item.5.unit}}</span></div>
+                    </div>
+
+                    <div class="plus_div" style="margin-left: 15px;">
+                        <span class="plus_symbol">+</span> 
+                   </div>
+                       <div class="increase_text">{{diet_advice.general.2.value}}
+                           <span class="carbs_text">Fats</span>
+                       </div>
+                       <div class="div_content">{{diet_advice.general.2.text}}</div>
+                       
+                </div>
+
+                <div class="div2">
+                    <div class="upper_div">
+                        <div class="upper_div2">
+                            <div class="calcium_text">Fibre</div>
+                            <div class="percent">{{diet_advice.item.8.value}} {{diet_advice.item.8.unit}}</div>
+                        </div>
+                        <div class="gm_text">{{diet_advice.item.7.value}}<span class="gm">{{diet_advice.item.7.unit}}</span></div>
+                    </div>
+
+                    <div class="plus_div" style="margin-left: 15px;">
+                        <span class="plus_symbol">+</span>
+                   </div>
+                       <div class="increase_text">{{diet_advice.general.3.value}}
+                           <span class="carbs_text">Fats</span>
+                       </div>
+                       <div class="div_content">{{diet_advice.general.3.text}}</div>
+
+                </div>
+
+
+                <div class="div2">
+
+                    <div class="plus_div" style="margin-left: 15px;">
+                        <span class="plus_symbol">+</span> 
+                   </div>
+                       <div class="increase_text" style="margin-left: 32px;font-size: 9px;margin-top: -14px;">{{diet_advice.general.4.value}}
+                           <span class="carbs_text" style="font-size: 9px;margin-top: -1px;">Immunity Boosters</span>
+                       </div>
+                       <div class="div_content" style="margin-top: 15px;">{{diet_advice.general.4.text}}</div>
+                </div>
+
+
+            </div>
+            <div class="bottom_day_time">19-08-2020 11:34:45, v1.0 <span class="two">2</span></div>
+
+  </div>          
+</body></br>
+</html>

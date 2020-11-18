@@ -1,0 +1,58 @@
+.flex-wrapper_2 {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.single-chart_2 {
+  width: 33%;
+  justify-content: space-around ;
+}
+
+.circular-chart_2{
+  display: block;
+  margin: 10px auto;
+  max-width: 80%;
+  max-height: 250px;
+}
+
+.circle-bg_2 {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.circle_2 {
+  fill: #fff;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+.circular-chart_2.orange .circle_2 {
+  stroke: #ff9f00;
+}
+
+.circular-chart_2.red .circle_2 {
+  stroke: #da2c43;
+}
+
+.circular-chart_2.green .circle_2 {
+  stroke: #4CC790;
+}
+
+.circular-chart_2.blue .circle_2 {
+  stroke: #3c9ee5;
+}
+
+.percentage_2 {
+  fill: #666;
+  font-family: sans-serif;
+ font-size:0.5em;
+  text-anchor: middle;
+  color:#fff;
+}

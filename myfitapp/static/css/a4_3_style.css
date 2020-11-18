@@ -1,0 +1,404 @@
+body{
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+	left:0px;
+	top:0px;
+	margin:0 auto;
+	position: relative;
+	transform: scale(1.8);
+	transform-origin: 0 0;
+	overflow-x: hidden;
+}
+.A4-2_screen{
+    position: relative;
+    width: 595px;
+    height: 842px;
+    background: #EDF2F5;
+    display: flex;
+    flex-direction: column;
+}
+
+.div1{
+   display: flex;
+}
+
+.myfitprint{
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin: 16px 27px;
+}
+
+.poweredbymetflux{
+    font-weight: 300;
+    font-size: 9px;
+    line-height: 11px;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin-left: 7px;
+}
+
+.karan_gender_age{
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    color: #000000;
+    margin-left: 200px;
+    margin-right: 27px;
+}
+
+
+.activity_text{
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #000000;
+    margin-left: 60px;
+    margin-top: 10px;
+}
+
+.risk_divs{
+    display: flex;
+    margin-left: 20px;
+
+}
+
+
+.one_div{
+    position: relative;
+}
+
+.second_div{
+    position: relative;
+}
+
+.third_div{
+    position: relative;
+}
+
+.warning_orange_div{
+    width: 168px;
+    height: 74px;
+    margin-left: 18px;
+    margin-top: 25px;
+    background: #ffb36d;
+    border: 1px solid #F3F3F3;
+    box-sizing: border-box;
+    border-radius: 10px;
+   }
+
+   .warning_sign_orange{
+        width: 20px;
+        height: 20px;
+        margin-left: 14px;
+        margin-top: 5px;
+        border-radius: 50px;
+        background: rgba(255, 255, 255, 0.2);
+        border: 1px solid #eea25b;
+        box-sizing: border-box;
+   }
+
+   .warning_sign_symbol{
+        margin-left: 7px;
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 155%;
+        color: #FFFFFF;
+   }
+
+   .warning_text{
+    margin-left: 42px;
+    margin-top: -20px;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 155%;
+    color: #FFFFFF;
+   }
+
+   .section1_your_risk_screen{
+    position: absolute;
+    width: 168px;
+    height: 64px;
+    margin-left: 18px;
+    margin-right: 17px;
+    top: 50px;
+    background: #FFFFFF;
+    border: 1px solid #F3F3F3;
+    box-sizing: border-box;
+    border-radius: 14px;
+    display: flex;
+}
+
+.section-head{
+    width: 30px;
+    margin-top: 8px;
+    margin-left: 12px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.section_hr{
+    width: 32px;
+    margin-top: 25px;
+    margin-left: px;
+    height:0px;
+    border: 1px solid #F9F9F9;
+    transform: rotate(90deg);
+}
+
+.score_div{
+    margin-left: 11px;
+    margin-top: 10px;
+    display: flex;
+}
+
+.score{
+    margin-left: -32px;
+    margin-top: -4px;
+    font-weight: 500;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 31px;
+    color: #ffb36d;
+}
+
+.out_of_div{
+    margin-left: -3px;
+    margin-top: -12px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 12px;
+    color: #9F9F9F;
+}
+
+.button5{
+    display: flex;
+    padding: 1px 8px;
+    width: 52px;
+    height: 10px;
+    margin-top: 25px;
+    margin-left: -64px;
+    background: #FFB36D;
+    border-radius: 30px;
+}
+
+.label6{
+    font-weight: 500;
+    font-size: 8px;
+    line-height: 8px;
+    margin-left: px;
+    margin-top: 2px;
+    color: #FFFFFF;
+}
+
+.risk_text{
+    font-weight: normal;
+    font-size: 7px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    color: #000000;
+    margin-left: 49px;
+    margin-top: 29px;
+
+}
+
+.flex2_div{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 30px;
+    margin-top: 8px;
+}
+
+.div_1{
+    width: 166px;
+    height: 41px;
+    background-color: #FFFFFF;
+    margin-left: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.weight_gain_text{
+    margin-left: 12px;
+    margin-top: 8px;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 150%;
+}
+
+.plus_div{
+    width: 15px;
+    height: 15px;
+    background: rgba(75, 199, 125, 0.05);
+    border: 1px solid rgba(66, 173, 109, 0.1);
+    box-sizing: border-box;
+    border-radius: 50%;
+    margin: 12px 2px 1px 22px;
+}
+
+.plus_symbol{
+    margin-left: 3px;
+    margin-top: -1px;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 150%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #4BC77D;
+}
+
+.unit_text{
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 41px;
+    text-align: center;
+    color: #4BC77D;
+    margin: 0px 2px 21px 10px;
+}
+.unit{
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 15px;
+    color: #304152;
+    margin: -12px 0px 0px 2px;
+}
+
+.single_div{
+    width: 166px;
+    height: 37px;
+    margin-left: 49px;
+    margin-top: 14px;
+    background: #FFFFFF;
+    border-radius: 6px;
+   
+}
+
+.flex_text{
+    display: flex;
+}
+
+.text{
+    font-size: 8px;
+    font-weight: 520;
+    margin: 12px;
+}
+
+.cal_text{
+    font-size: 13px;
+    font-weight: 600;
+    margin: 12px;
+}
+.cal{
+    font-size: 8px;
+}
+
+.flex3_divs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    margin-top: 5px;
+
+}
+
+.div2{
+    width: 155px;
+    height: 145px;
+    margin-left: 20px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+
+.upper_div{
+    display: flex;
+    width: 155px;
+    height: 50px;
+    background: rgba(232, 232, 232, 0.2);
+    border-radius: 5px 5px 0px 0px;
+    margin: 0px px;
+}
+
+.calcium_text{
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 12px;
+    margin: 5px 26px 2px 8px;
+}
+.percent{
+    margin: 4px 2px 2px 8px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 23px;
+    color: #3B546B;
+}
+
+.gm_text{
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 45px;
+    color: #3B546B;
+    margin: 1px 1px 2px 30px;
+}
+.gm{
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 18px;
+    color: #000000;
+    margin: 35px 8.5px 33px -2px;
+}
+
+.increase_text{
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 150%;
+    color: #000000;
+    margin: -16px 2px 1px 40px;
+     display: flex;
+}
+.carbs_text{
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    color: #3B546B;
+    margin-left: 2px;
+    margin-top: 2px;
+   
+}
+.div_content{
+    width: 135px;
+    font-weight: normal;
+    font-size: 8px;
+    line-height: 10px;
+    color: #3B546B;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+
+
+
+.bottom_day_time{
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+   
+    color: #000000;
+    margin: 28px 55px 17px 31px;
+}
+
+.two{
+    margin-left: 520px ;
+}

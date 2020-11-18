@@ -1,0 +1,321 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/a4_2_style.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/a4_2_percen.css' %}" type="text/css">
+
+    <title>A4-2</title>
+</head>
+<body>
+    <div class="A4-2_screen">
+            <div class="div_style_2">
+                <div class="myfitprint_style_2">MyFitPrint Report <span class="poweredbymetflux_style_2">Powered by MetFlux</span></div>
+                <div class="karan_gender_age_style_2">{{general.general.0.value}} | {{general.general.1.value| capfirst}} | {{general.general.2.value | floatformat}} {{general.general.2.unit}}</div>
+            </div>
+           <div class="activity_text_style_2">Activity Analysis</div>
+
+        <div>
+            <div class="flex-wrapper_2" style="transform: scale(0.9);">
+                <div class="single-chart_2">
+                    <svg viewBox="0 0 36 36" class="circular-chart_2 red">
+                          <path class="circle-bg_2"
+                              d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+                          />
+                          <path class="circle_2"
+                              stroke-dasharray="30, 100"
+                              d="M18 2.0845
+                              a 15.9155 15.9155 0 0 1 0 31.831
+                              a 15.9155 15.9155 0 0 1 0 -31.831"
+
+                          />
+                          <text x="19" y="20.35" class="percentage_2"></text>
+                            <div class="right_side_style_2">
+                                <span style="font-size:15px; color:#808080; margin-top:-120px; margin-left:50px;">Activity Score</span></br>
+                                <div class="vector_div"> <label style="margin-top:-130px; margin-left:60px; color:#da2c43"> </label></div>
+
+                                    <div class="score_2" style="margin-top:-27px; margin-left:80px; font-size:20px; color:#da2c43">30</div>
+                                    <div class="out_of_div_2" style="margin-top:-22px; margin-left:110px;font-size:13px; color:#808080">/100</div>
+                                    <div style="width:100px; border-radius:10px; background:#da2c43;color:fff;text-align:Center; font-size:10px; margin-left:50px;margin-top:10px ">Needs Improvement </div>
+
+                    </svg>
+                </div>
+
+            </div>
+  
+        <div class="divs_style_2">
+            <div class="left_side_style_2">
+                <div class="section-head_style_2">Calorie burn</div>
+                <div class="healthy_style_2"> <span class="checkmark_style_2">&#10003;</span> Healthy:
+                    <button class="range_style_2">18-30</button>
+                </div>
+            </div>  
+            <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+            <div class="right_side_style_2">
+                <div class="score_div_style_2">200
+                    <span class="out_of_div_style_2">kCal</span>
+                </div>
+                <button class="button5_style_2">
+                   Moderate low
+                </button>
+            </div>
+        </div>
+        <div class="divs_style_2">
+            <div class="left_side_style_2">
+                <div class="section-head_style_2">BMR</div>
+                <div class="healthy_style_2"> <span class="checkmark_style_2">&#10003;</span> Healthy:
+                    <button class="range_style_2">18-30</button>
+                </div>
+            </div>  
+            <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+            <div class="right_side_style_2">
+                <div class="score_div_style_2">1700
+                    <span class="out_of_div_style_2">kCal</span>
+                </div>
+                <button class="button5_style_2">
+                   Moderate low
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="activity_bottom_style_2">MyFitPrint attempts to calculate accurate daily calorie burn based on the answers you provide. However, these figures should be considered as estimates.</div>
+    <div class="activity_text_style_2">Weight Analysis</div>
+    <div class="activity_bottom_style_2" style="margin-top: 12px;font-size: 10px;">The 10 Months prediction is based on the assumption of continuing current diet, activity, and lifestyle.</div>
+   
+
+    <div class="div_flex_one_style_2">
+        <div class="weight_div_style_2">
+             <div class="top_div_style_2">
+                <div class="left_side_style_2">
+                    <div class="section-head_style_2">Your Weight </div>
+                    <div class="healthy_style_2"> <span class="checkmark_style_2">&#10003;</span> Healthy:
+                        <button class="range_style_2">{{weight_analysis.ranges.0.range.0}}-{{weight_analysis.ranges.0.range.1}}</button>
+                    </div>
+                </div>  
+                <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                <div class="right_side_style_2">
+                    <div class="score_div_style_2">{{weight_analysis.ranges.0.value}}
+                        <span class="out_of_div_style_2">{{weight_analysis.ranges.0.unit}}</span>
+                    </div>
+                    <button class="button5_style_2" style="background: {{weight_analysis.ranges.0.color}};">
+                       {{weight_analysis.ranges.0.category}}
+                    </button>
+                </div>
+             </div>
+
+             <div class="inner_div_style_2">
+                 <div class="left_side_style_2">
+                    <div class="arrow_sign_div_style_2"><span class="arrow_sign_style_2">&#x2197;</span></div>
+                    <div class="weight_after_style_2">{{weight_analysis.item.0.name}}</div>
+                    <div class="text_months_style_2">{{weight_analysis.general.value}}</div>
+                 </div>
+                 <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                 <div class="right_side_style_2">
+                       <div class="score_div1_style_2">{{weight_analysis.item.0.value}}
+                        <span class="out_of_div1_style_2">{{weight_analysis.item.0.unit}}</span></div>
+                        <div class="button51_style_2">{{weight_analysis.item.0.category}}</div>
+                 </div>
+              </div>
+
+        </div>
+        <div class="weight_div_style_2">
+            <div class="top_div_style_2">
+                <div class="left_side_style_2">
+                    <div class="section-head_style_2">BMI</div>
+                    <div class="healthy_style_2"> <span class="checkmark_style_2">&#10003;</span> Healthy:
+                        <button class="range_style_2">{{weight_analysis.ranges.1.range.0}}-{{weight_analysis.ranges.1.range.1}}</button>
+                    </div>
+                </div>  
+                <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                <div class="right_side_style_2">
+                    <div class="score_div_style_2">{{weight_analysis.ranges.1.value}}
+                        <span class="out_of_div_style_2">{{weight_analysis.ranges.1.unit}}</span>
+                    </div>
+                    <button class="button5_style_2"  style="background: {{weight_analysis.ranges.1.color}};">
+                       {{weight_analysis.ranges.1.category}}
+                    </button>
+                </div>
+             </div>
+
+             <div class="inner_div_style_2">
+                 <div class="left_side_style_2">
+                    <div class="arrow_sign_div_style_2"><span class="arrow_sign_style_2">&#x2197;</span></div>
+                    <div class="weight_after_style_2">{{weight_analysis.item.1.name}}</div>
+                    <div class="text_months_style_2">{{weight_analysis.general.value}} {{weight_analysis.general.months}}</div>
+                 </div>
+                 <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                 <div class="right_side_style_2">
+                       <div class="score_div1_style_2">{{weight_analysis.item.1.value}}
+                        <span class="out_of_div1_style_2">{{weight_analysis.item.1.unit}}</span></div>
+                        <div class="button51_style_2">{{weight_analysis.item.1.category}}</div>
+                 </div>
+              </div>
+
+        </div>
+        <div class="weight_div_style_2">
+            <div class="top_div_style_2">
+                <div class="left_side_style_2">
+                    <div class="section-head_style_2">Body fat %</div>
+                    <div class="healthy_style_2"> <span class="checkmark_style_2">&#10003;</span> Healthy:
+                        <button class="range_style_2">{{weight_analysis.ranges.2.range.0}}-{{weight_analysis.ranges.2.range.1}}</button>
+                    </div>
+                </div>  
+                <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                <div class="right_side_style_2">
+                    <div class="score_div_style_2">{{weight_analysis.ranges.2.value}}
+                        <span class="out_of_div_style_2">{{weight_analysis.ranges.2.unit}}</span>
+                    </div>
+                    <button class="button5_style_2" style="background: {{weight_analysis.ranges.2.color}};">
+                      {{weight_analysis.ranges.2.category}}
+                    </button>
+                </div>
+             </div>
+
+             <div class="inner_div_style_2">
+                 <div class="left_side_style_2">
+                    <div class="arrow_sign_div_style_2"><span class="arrow_sign_style_2">&#x2197;</span></div>
+                    <div class="weight_after_style_2">{{weight_analysis.item.2.name}}</div>
+                    <div class="text_months_style_2">{{weight_analysis.general.value}} {{weight_analysis.general.months}}</div>
+                 </div>
+                 <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                 <div class="right_side_style_2">
+                       <div class="score_div1_style_2">{{weight_analysis.item.2.value}}
+                        <span class="out_of_div1_style_2">{{weight_analysis.item.2.unit}}</span></div>
+                        <div class="button51_style_2">{{weight_analysis.item.2.category}}</div>
+                 </div>
+              </div>
+
+        </div>
+        <div class="weight_div_style_2">
+            <div class="top_div_style_2">
+                <div class="left_side_style_2">
+                    <div class="section-head_style_2">Lean mass %</div>
+                    <div class="healthy_style_2"> <span class="checkmark_style_2">&#10003;</span> Healthy:
+                        <button class="range_style_2"></button>
+                    </div>
+                </div>  
+                <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                <div class="right_side_style_2">
+                    <div class="score_div_style_2">
+                        <span class="out_of_div_style_2"></span>
+                    </div>
+                    <button class="button5_style_2" >
+                    </button>
+                </div>
+             </div>
+
+             <div class="inner_div_style_2">
+                 <div class="left_side_style_2">
+                    <div class="arrow_sign_div_style_2"><span class="arrow_sign_style_2">&#x2197;</span></div>
+                    <div class="weight_after_style_2"></div>
+                    <div class="text_months_style_2"></div>
+                 </div>
+                 <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                 <div class="right_side_style_2">
+                       <div class="score_div1">
+                        <span class="out_of_div1_style_2"></span></div>
+                        <div class="button51_style_2"></div>
+                 </div>
+              </div> 
+        </div>
+    </div>
+
+    <div class="activity_bottom_style_2">MyFitPrint attempts to calculate accurate daily calorie burn based on the answers you provide. However, these figures should be considered as estimates.</div>
+    <div class="activity_text_style_2">Your Scores</div>
+    <div class="activity_bottom_style_2" style="margin-top: 12px;font-size: 10px;">The {{your_scores.general.value}} {{your_scores.general.unit}} prediction is based on the assumption of continuing current diet, activity, and lifestyle.</div>
+   
+    <div class="flex6_divs_style_2">
+            <div class="weight_div_style_2" style="width: 166px;height: 103px;">
+                <div class="top_div_style_2" style="width: 166px;">
+                    <div class="left_side_style_2">
+                        <div class="section-head_style_2">Fitness Score</div>
+                        <div class="healthy_style_2"> <span class="checkmark_style_2">&#10003;</span> Healthy:
+                            <button class="range_style_2">{{your_scores.ranges.0.range.0}}-{{your_scores.ranges.0.range.1}}</button>
+                        </div>
+                    </div>  
+                    <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                    <div class="right_side_style_2">
+                        <div class="score_div_style_2" style="color:{{your_scores.ranges.0.color}};">{{your_scores.ranges.0.value}}
+                            <span class="out_of_div_style_2">/100</span>
+                        </div>
+                        <button class="button51_style_2" style="background: {{your_scores.ranges.0.color}};">
+                           {{your_scores.ranges.0.category}}
+                        </button>
+                    </div>
+                 </div>
+    
+                 <div class="inner_div_style_2">
+                     <div class="left_side_style_2">
+                        <div class="arrow_sign_div_style_2"><span class="arrow_sign_style_2">&#x2197;</span></div>
+                        <div class="weight_after_style_2">Fitness Score after</div>
+                        <div class="text_months_style_2">{{your_scores.general.0.value }}  {{your_scores.general.0.unit }} </div>
+                     </div>
+                     <hr class="vertical_hr_style_2" style="margin-top: 20px;">
+                     <div class="right_side_style_2">
+                           <div class="score_div1"  style="color:{{your_scores.ranges.5.color}};">{{your_scores.ranges.5.value}}
+                            <span class="out_of_div1_style_2">/100</span></div>
+                            <div class="button51_style_2" style="background: {{your_scores.ranges.5.color}};">{{your_scores.ranges.5.category}}</div>
+                     </div>
+                  </div>
+              </div>
+
+                <div class="weight2_div_style_2">
+                    <div class="weight2_div1_style_2">
+                        <div class="title_text_style_2">Nutrition Score</div>
+                        <hr class="vertical_hr_style_2" style="margin-top: 20px;margin-left: 38px;">
+                        <div class="right_side_style_2">
+                            <div class="score_div_style_2"  style="color:{{your_scores.ranges.1.color}};">{{your_scores.ranges.1.value}}
+                                <span class="out_of_div_style_2">/100</span>
+                            </div>
+                            <button class="button51_style_2" style="background: {{your_scores.ranges.1.color}}">
+                              {{your_scores.ranges.1.category}}
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="weight2_div1_style_2">
+                        <div class="title_text_style_2">Stress Score</div>
+                        <hr class="vertical_hr_style_2" style="margin-top: 20px;margin-left: 38px;">
+                        <div class="right_side_style_2">
+                            <div class="score_div_style_2"  style="color:{{your_scores.ranges.3.color}};">{{your_scores.ranges.3.value}}
+                                <span class="out_of_div_style_2">/100</span>
+                            </div>
+                            <button class="button51_style_2" style="background: {{your_scores.ranges.3.color}}">
+                              {{your_scores.ranges.3.category}}
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="weight3_div_style_2">
+                    <div class="weight2_div1_style_2">
+                        <div class="title_text_style_2">Activity Score</div>
+                        <hr class="vertical_hr_style_2" style="margin-top: 20px;margin-left: 38px;">
+                        <div class="right_side_style_2">
+                            <div class="score_div_style_2"  style="color:{{your_scores.ranges.3.color}};">{{your_scores.ranges.2.value}}
+                                <span class="out_of_div_style_2">/100</span>
+                            </div>
+                            <button class="button51_style_2" style="background: {{your_scores.ranges.2.color}}">
+                              {{your_scores.ranges.2.category}}
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+          </div>
+           
+          <div class="activity_bottom_style_2">The scores are calculated using lifestyle data if relevant diagnostic data is not provided</div>
+          <div class="bottom_day_time_style_2">19-08-2020 11:34:45, v1.0 <span class="two_style_2">2</span></div>
+
+
+</div>
+</body></br>
+</html>
